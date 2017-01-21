@@ -18,5 +18,15 @@ describe('FizzBuzz', function() {
       for( loopCount = 1; loopCount < maxLoopCount; loopCount++ ) {
           expect(fizzbuzz.play(3*loopCount)).to.equal('Fizz');
       }
-  })
+  });
+
+  it('handles multiples of 5', function() {
+      const fizzbuzz = new FizzBuzz();
+      var maxLoopCount = 1000,
+          loopCount;
+
+      for( loopCount = 1; loopCount < maxLoopCount; loopCount++ ){
+          expect(fizzbuzz.play(5*loopCount)).to.equal('Buzz');
+      }
+  });
 });
