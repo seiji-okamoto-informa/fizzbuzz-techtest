@@ -16,6 +16,11 @@ describe('FizzBuzz', function() {
       var maxLoopCount = 1000,
           loopCount;
       for( loopCount = 1; loopCount < maxLoopCount; loopCount++ ) {
+          // Skip instances where loopCount is a multiple of 5
+          // This is a special case
+          if( loopCount % 5 == 0 ) {
+              continue;
+          }
           expect(fizzbuzz.play(3*loopCount)).to.equal('Fizz');
       }
   });
@@ -26,6 +31,11 @@ describe('FizzBuzz', function() {
           loopCount;
 
       for( loopCount = 1; loopCount < maxLoopCount; loopCount++ ){
+          // Skip instances where loopCount is a multiple of 3
+          // This is a special case
+          if( loopCount % 3 == 0 ){
+              continue;
+          }
           expect(fizzbuzz.play(5*loopCount)).to.equal('Buzz');
       }
   });
