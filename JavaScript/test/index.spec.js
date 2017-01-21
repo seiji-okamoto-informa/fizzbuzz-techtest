@@ -39,4 +39,13 @@ describe('FizzBuzz', function() {
           expect(fizzbuzz.play(5*loopCount)).to.equal('Buzz');
       }
   });
+
+  it('handles multiples of 3 AND 5', function() {
+      const fizzbuzz = new FizzBuzz();
+      var maxLoopCount = 1000,
+          loopCount;
+      for( loopCount = 1; loopCount < maxLoopCount; loopCount++ ) {
+          expect(fizzbuzz.play(3*5*loopCount)).to.equal('Fizzbuzz');
+      }
+  });
 });
