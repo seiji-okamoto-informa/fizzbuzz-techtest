@@ -83,4 +83,13 @@ describe('FizzBuzz', function() {
 
       expect(fizzbuzz.play(0)).to.equal('Fizzbuzz');
   });
+
+  it('handles non-integer numbers', function() {
+      const fizzbuzz = new FizzBuzz();
+
+      expect(fizzbuzz.play(1.5)).to.equal(1.5);
+      expect(fizzbuzz.play(3.0)).to.equal('Fizz');
+      expect(fizzbuzz.play(5.0)).to.equal('Buzz');
+      expect(fizzbuzz.play(15.0)).to.equal('Fizzbuzz');
+  });
 });
