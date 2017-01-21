@@ -48,4 +48,15 @@ describe('FizzBuzz', function() {
           expect(fizzbuzz.play(3*5*loopCount)).to.equal('Fizzbuzz');
       }
   });
+
+  /**
+   * Zero (0) is a special edge case.  According to Wiki (https://en.wikipedia.org/wiki/Multiple_(mathematics)),
+   * it is a multiple of everything, so it should fall under the 3rd rule
+   * and output 'Fizzbuzz'.
+   **/
+  it('handles special edge case of 0', function() {
+      const fizzbuzz = new FizzBuzz();
+
+      expect(fizzbuzz.play(0)).to.equal('Fizzbuzz');
+  });
 });
