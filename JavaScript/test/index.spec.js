@@ -33,7 +33,11 @@ describe('FizzBuzz', function() {
           if( loopCount % 5 == 0 ) {
               continue;
           }
+          // Test positives
           expect(fizzbuzz.play(3*loopCount)).to.equal('Fizz');
+
+          // Test negatives
+          expect(fizzbuzz.play(-3*loopCount)).to.equal('Fizz');
       }
   });
 
@@ -48,7 +52,11 @@ describe('FizzBuzz', function() {
           if( loopCount % 3 == 0 ){
               continue;
           }
+          // Test positives
           expect(fizzbuzz.play(5*loopCount)).to.equal('Buzz');
+
+          // Test negatives
+          expect(fizzbuzz.play(-5*loopCount)).to.equal('Buzz');
       }
   });
 
@@ -57,7 +65,11 @@ describe('FizzBuzz', function() {
       var maxLoopCount = 1000,
           loopCount;
       for( loopCount = 1; loopCount < maxLoopCount; loopCount++ ) {
+          // Test positives
           expect(fizzbuzz.play(3*5*loopCount)).to.equal('Fizzbuzz');
+
+          // Test negatives
+          expect(fizzbuzz.play(-3*5*loopCount)).to.equal('Fizzbuzz');
       }
   });
 
